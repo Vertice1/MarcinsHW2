@@ -1,0 +1,19 @@
+---
+- 
+  rule: '/^.{5,}$/'
+  errorMessage: 'Password too short '
+- 
+  rule: '/[0-9]+/'
+  errorMessage: >
+    Password should contain at least one
+    number
+- 
+  rule: '/^(?!.*(.)\1{2})/'
+  errorMessage: >
+    Password should contain no more than two
+    repeating characters
+- 
+  rule: '/[A-Z\.\*\+\?$\^\/\\\[\{\(\)\}\]]+/'
+  errorMessage: >
+    Password should contain at least one
+    uppercase character or special character
